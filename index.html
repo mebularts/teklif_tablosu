@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teklif Tablosu</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" src="scripts.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <!-- jsPDF kütüphanesini ekleyelim -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    </head>
+<body>
+    <div class="container">
+        <div style="float: left;" class="logo">
+            <label for="logo-upload" class="logo-upload-label">
+                Logo Seç
+            </label>
+            <input type="file" accept="image/*" id="logo-upload" class="logo-upload">
+            <img src="" alt="Firma Logo" id="logo-preview">
+            <p>Firma Adı: <input style="margin-left: 1px;" type="text" placeholder="Firma Adı"></p>
+            <p>Adres: </p><textarea style="width: 250px;" type="text" placeholder="Adres"></textarea>
+            <p>Tel. No: <input style="margin-left: 21px;" type="tel" placeholder="Tel. No"></p>
+            <p>Mail: <input style="margin-left: 41px;" type="email" placeholder="Mail"></p>
+        </div>
+        <div style="float: right; margin-top:55px;" class="info">
+            <p>Tarih<input type="text" id="tarih" placeholder="Tarih"></p>
+            <p id="dolar_kuru" >Güncel Dolar Kuru<input type="text" id="dolar_kuru" placeholder="Güncel Dolar Kuru"></p>
+            <p>Geçerlilik Tarihi<input type="text" id="gecerlilik_tarihi" placeholder="Geçerlilik Tarihi"></p>
+            <p>Müşteri Adı<input type="text" id="musteri_adi" placeholder="Müşteri Adı"></p>
+        </div>
+        <table class="job-table">
+            <thead>
+                <tr>
+                    <th>İş Adı</th>
+                    <th>Adet</th>
+                    <th>Fiyat</th>
+                    <th>KDV</th>
+                    <th>İndirim</th>
+                    <th>Toplam Tutar</th>
+                </tr>
+            </thead>
+            <tbody style="height: 40px;" contenteditable="true">
+                <!-- Dinamik olarak eklenecek 10 adet satır -->
+            </tbody>
+        </table>
+        <hr>
+        <div class="total">
+            <p>Toplam Tutar:<input type="text" placeholder="Toplam Tutar"></p>
+            <p>KDV:<input type="text" placeholder="KDV"></p>
+            <p>İndirim:<input type="text" placeholder="İndirim"></p>
+            <p>Teklif:<input type="text" placeholder="Teklif"></p>
+        </div>
+        <div class="notes">
+            <p>Özel Alan:</p>
+            <textarea></textarea>
+            <hr>
+        </div>
+        <div class="signature">
+            <div style="float: left;">Müşteri Kaşe/İmza Alanı</div>
+            <div style="float: right;">Freelancer Kaşe/İmza Alanı</div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+</body>
+</html>
